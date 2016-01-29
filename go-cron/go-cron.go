@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	gocron "github.com/odise/go-cron"
+	gocron "github.com/codemedic/go-cron"
 	"log"
 	"os"
 	"os/signal"

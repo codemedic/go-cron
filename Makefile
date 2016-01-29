@@ -5,8 +5,8 @@ VERSION := "v0.0.4"
 
 build:
 	mkdir -p out/darwin out/linux
-	GOOS=darwin go build -o out/darwin/go-cron -ldflags "-X main.build `git rev-parse --short HEAD`" bin/go-cron.go
-	GOOS=linux go build -o out/linux/go-cron -ldflags "-X main.build `git rev-parse --short HEAD`" bin/go-cron.go
+	GOOS=darwin go build -o out/darwin/go-cron -ldflags "-X main.build `git rev-parse --short HEAD`" go-cron/go-cron.go
+	GOOS=linux go build -o out/linux/go-cron -ldflags "-X main.build `git rev-parse --short HEAD`" go-cron/go-cron.go
 
 release: build
 	rm -f out/darwin/go-cron-osx.gz
